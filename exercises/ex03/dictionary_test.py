@@ -75,12 +75,12 @@ def test_favorite_color_single_entry():
 
 def test_bin_len_basic_case():
     """Tests bin_len with different length words"""
-    assert bin_len(["the", "bad", "friend"]) == {3: ["the", "bad"], 6: ["friend"]}
+    assert bin_len(["the", "bad", "friend"]) == {3: {"the", "bad"}, 6: {"friend"}}
 
 
 def test_bin_len_duplicates():
     """Tests bin_len to ensure duplicates aren't added twice."""
-    assert bin_len(["the", "the", "bad"]) == {3: ["the", "bad"]}
+    assert bin_len(["the", "the", "bad"]) == {3: {"the", "bad"}}
 
 
 def test_bin_len_empty_list():
