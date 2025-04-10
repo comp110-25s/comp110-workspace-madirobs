@@ -80,7 +80,7 @@ def test_bin_len_basic_case():
 
 def test_bin_len_duplicates():
     """Tests bin_len to ensure duplicates aren't added twice."""
-    assert bin_len(["the", "the", "bad"]) == {3: {"the", "bad"}}
+    assert bin_len(["the", "the", "bad"]) == {3: {"bad", "the"}}
 
 
 def test_bin_len_empty_list():

@@ -49,7 +49,7 @@ def bin_len(strings: list[str]) -> dict[int, set[str]]:
     for string in strings:
         length = len(string)
         if length not in length_bins:
-            length_bins[length] = []
+            length_bins[length] = {string}
         if string not in length_bins[length]:
-            length_bins[length].append(string)
+            length_bins[length].add(string)
     return length_bins
